@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #define f(i,a,b) for(int i = a; i<b; i++)
-#define fi(i,a,b) for(int i = a; i<=b; i++)
 #define ll long long
 #define v(a,b) vector<a> b
 #define s(a,b) set<a> b
@@ -10,6 +9,7 @@ using namespace std;
 
 int main(){
 
-
+string n; cin>>n;
+cout<<"TheForces rounds!"<<endl;
 return 0;
 }

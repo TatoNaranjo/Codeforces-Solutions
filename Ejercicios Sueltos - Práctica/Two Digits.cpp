@@ -14,6 +14,10 @@ using namespace std;
 
 int main(){
   fast_io;
+ int t; cin>>t;
+    string a = to_string(t);
+    cout<<a[1]<<a[2]<<endl;
+
 
 return 0;
 }

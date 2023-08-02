@@ -15,5 +15,32 @@ using namespace std;
 int main(){
   fast_io;
 
+    int n; cin>>n;
+
+    if(n<=9){
+    int sum = 0;
+    while(n>-1){
+        sum++;
+        n--;
+    }
+        cout<<sum<<endl;
+    }
+    else{
+       int sum = 0;
+        int index = 1;
+    while(n>-1){
+        if(n-index>-1){
+          n-=index;
+         index++;
+          sum++;
+        }
+        else if(n-index<0){
+          index = 1;
+        }
+
+    }
+cout<<sum<<endl;
+    }
+
 return 0;
 }

@@ -14,6 +14,13 @@ using namespace std;
 
 int main(){
   fast_io;
-
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    v(int,vec);
+    vec.pb(a);
+    vec.pb(b);
+    vec.pb(c);
+    sort(vec.begin(),vec.end());
+    cout<<max(0,d-(vec[1]-vec[0]))+max(0,d-(vec[2]-vec[1]))<<endl;
 return 0;
 }

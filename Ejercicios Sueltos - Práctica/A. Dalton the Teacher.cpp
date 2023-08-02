@@ -14,6 +14,21 @@ using namespace std;
 
 int main(){
   fast_io;
+    int t; cin>>t;
+    while(t--){
+        int l; cin>>l;
+        v(int,vec);
+        v(int,inconformes);
+        f(i,0,l){
+        int x; cin>>x;
+        if(x==i+1)inconformes.pb(x);
+        vec.pb(x);
+        }
 
+        int counter = inconformes.size()/2;
+        if(inconformes.size()%2!=0)counter++;
+
+        cout<<counter<<endl;
+    }
 return 0;
 }

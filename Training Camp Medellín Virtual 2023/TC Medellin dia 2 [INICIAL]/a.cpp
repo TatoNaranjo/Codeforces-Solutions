@@ -14,6 +14,21 @@ using namespace std;
 
 int main(){
   fast_io;
+    int t; cin>>t;
 
+    while(t--){
+      int n; cin>>n;
+      v(int,a);
+      v(int,b);
+      int counter = 0;
+      f(i,0,n){
+        int x; cin>>x;
+        a.pb(x);
+        cin>>x;
+        b.pb(x);
+      if(a[i]>b[i])counter++;
+      }
+        cout<<counter<<endl;
+    }
 return 0;
 }

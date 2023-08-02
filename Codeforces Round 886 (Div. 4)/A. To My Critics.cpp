@@ -14,6 +14,16 @@ using namespace std;
 
 int main(){
   fast_io;
+    int t; cin>>t;
+    while(t--){
+    bool ans = false;
+    int a,b,c;
+    cin>>a>>b>>c;
+    if(a+b>=10||a+c>=10||b+c>=10)ans=true;
 
+    if(ans)cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+
+    }
 return 0;
 }

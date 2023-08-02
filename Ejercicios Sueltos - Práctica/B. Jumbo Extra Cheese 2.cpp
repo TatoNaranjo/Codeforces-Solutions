@@ -14,6 +14,19 @@ using namespace std;
 
 int main(){
   fast_io;
+    ll t; cin>>t;
+    while(t--){
+        ll n; cin>>n;
+          ll a,b;
+          ll mini = 0;
+          ll maxi = INT_MIN;
+        f(i,0,n){
+            cin>>a>>b;
+            mini+= min(a,b);
+            maxi = max(maxi,max(a,b));
+        }
+        cout<<2*(maxi+mini)<<endl;
 
+    }
 return 0;
 }

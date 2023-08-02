@@ -14,6 +14,12 @@ using namespace std;
 
 int main(){
   fast_io;
-
-return 0;
+    string name; cin>>name;
+    s(char,chars);
+    f(i,0,name.size()){
+    chars.insert(name[i]);
+    }
+    if(chars.size()%2==0)cout<<"CHAT WITH HER!"<<endl;
+    else cout<<"IGNORE HIM!"<<endl;
+    return 0;
 }

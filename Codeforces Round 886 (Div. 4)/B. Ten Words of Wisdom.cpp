@@ -14,6 +14,23 @@ using namespace std;
 
 int main(){
   fast_io;
+    int t; cin>>t;
+    while(t--){
+    int n; cin>>n;
+    int ans = 0;
+    int maxn = 0;
+    f(i,0,n){
+    int a,b;
+    cin>>a>>b;
 
+    if(a<=10 && b>maxn){
+     maxn=b;
+    ans = i+1;
+    }
+    }
+    cout<<ans<<endl;
+
+
+    }
 return 0;
 }

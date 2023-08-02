@@ -14,6 +14,20 @@ using namespace std;
 
 int main(){
   fast_io;
-
+    int t; cin>>t;
+    while(t--){
+        int yInit,nNoInit;cin>>yInit>>nNoInit;
+        s(int,noR);
+        f(i,0,nNoInit){
+        int x; cin>>x;
+        noR.insert(x);
+        }
+        int yFinal; cin>>yFinal;
+        int sum = 1;
+        f(i,yInit,yFinal){
+        if(noR.find(i)==noR.end())sum++;
+        }
+        cout<<sum<<endl;
+    }
 return 0;
 }

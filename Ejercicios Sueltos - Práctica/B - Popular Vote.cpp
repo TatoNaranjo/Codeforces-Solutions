@@ -14,6 +14,26 @@ using namespace std;
 
 int main(){
   fast_io;
+    int n,m;
+    cin>>n>>m;
 
+    int counter = 0;
+    int sum = 0;
+    v(int,vec);
+    f(i,0,n){
+    int x; cin>>x;
+    sum+=x;
+    vec.pb(x);
+
+    }
+  //  cout<<sum<<endl;
+
+    int mini = (sum + (4 * m) - 1) / (4 * m);
+    //cout<<mini<<endl;
+    f(i,0,n){
+    if(vec[i]>=mini)counter++;
+    }
+    if(counter>=m)cout<<"Yes"<<endl;
+    else cout<<"No"<<endl;
 return 0;
 }

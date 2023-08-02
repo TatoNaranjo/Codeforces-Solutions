@@ -1,42 +1,45 @@
-#include <bits/stdc++.h>
-#define f(i,a,b) for(int i = a; i<b; i++)
-#define fi(i,a,b) for(int i = a; i<=b; i++)
-#define ll long long
-#define v(a,b) vector<a> b
-#define s(a,b) set<a> b
-#define pb push_back
+#include <iostream>
 
 using namespace std;
 
-int main(){
-int t; cin>>t;
-while(t--){
-    int d,md,mt; cin>>d>>md>>mt;
-    int countMin = 0;
-    v(int,vac);
-    f(i,0,d){
-    int x; cin>>x;
-    if(x<=mt)countMin++;
-    vac.push_back(x);
-    }
+int main()
+{
+    int t,n,k,l,contdiasposibles,cont,contadoraux = 0;
 
-    if(countMin<md)cout<<0<<endl;
+    cin>>t;
+    while(t--){
+       //n = cantidad de dias
+        //k = dias consecutivos
+        //l = temperatura maxima
+        cin>>n>>k>>l;
+        int TempDias[n];
 
-    else{
-        int ans = 0;
-
-        f(i,0,d){
-            countMin = 0;
-            f(j,i,d){
-            if(vac[j]<=mt){countMin++;
-            if(countMin>=md)ans++;
-            }
-            else break;
-            }
+        for(int i=0;i<n;i++){
+            cin>>TempDias[i];
         }
-    cout<<ans<<endl;
-    }
-}
+        //n = 3
+        //k = 2
+        //l = 10
+        //TempDias = 3 0 15
 
-return 0;
+        while(cont<n){
+            for(int i=cont;i<n;i++){
+                if(TempDias[i]<=l){
+                    contadoraux++;
+                    if(contadoraux == k){
+                        contdiasposibles++;
+                        contadoraux = 0;
+                    }
+                }else{
+                    break;
+                }
+            }
+            cont++;
+            contadoraux = 0;
+        }
+        cout<<contdiasposibles<<endl;
+        contadoraux = 0;
+        contdiasposibles = 0;
+        cont = 0;
+    }
 }

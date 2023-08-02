@@ -14,6 +14,16 @@ using namespace std;
 
 int main(){
   fast_io;
+    ll n,k;
+    cin>>n>>k;
+
+
+        ll remainder = n%k;
+        if(remainder<=k/2){
+            cout<<remainder<<endl;
+        }
+        else cout<<k-remainder<<endl;
+
 
 return 0;
 }

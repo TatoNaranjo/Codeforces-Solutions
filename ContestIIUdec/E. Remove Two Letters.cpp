@@ -2,11 +2,8 @@
 #define f(i,a,b) for(int i = a; i<b; i++)
 #define fi(i,a,b) for(int i = a; i<=b; i++)
 #define ll long long
-#define upper(a) transform(a.begin(),a.end(),a.begin(),[](unsigned char c){return toupper(c);});
-#define lower(a) transform(a.begin(),a.end(),a.begin(),[](unsigned char c){return tolower(c);});
 #define v(a,b) vector<a> b
 #define s(a,b) set<a> b
-#define us(a,b) unordered_set<a> b;
 #define pb push_back
 #define fast_io                                                                \
   ios_base::sync_with_stdio(0);                                                \
@@ -17,6 +14,16 @@ using namespace std;
 
 int main(){
   fast_io;
+    int t; cin>>t;
+    while(t--){
+        int l; cin>>l;
+        string str; cin>>str;
+        int ans = l-1;
+        f(i,1,l){
+            if(str[i-1]==str[i+1])ans--;
+        }
+        cout<<ans<<endl;
 
+    }
 return 0;
 }

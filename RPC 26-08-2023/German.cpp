@@ -14,6 +14,29 @@ using namespace std;
 
 int main(){
   fast_io;
+   string num; cin>>num;
+   int ans = 0;
+   if(num.size()==1){
+    cout<<num[0]-'1'+2;
+   }
+   else{
+    ans = (num.size()-1)*10;
+    ans+=num[0]-'1';
+    if(num[1]-'1'> num[0]-'1'){
+        ans++;
+    }
+    else if (num[1]-'1'==num[0]-'1'){
+        ans++;
+        f(i,0,num.size()){
+            if(num[i]-'1'<num[1]-'1'){
+                ans--;
+                break;  
+            }
+        }
+    }
+    cout<<ans;
+
+   }
 
 return 0;
 }
